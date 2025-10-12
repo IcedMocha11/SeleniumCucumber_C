@@ -38,3 +38,4 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 }
 //Note; Nasa #32 course content ka na sa course ni  Gianni Bruno
 //Note: example on how to run in terminal: mvn clean test -D "cucumber.options=--tags @INGFrameworkDemo" -D "env=ing"
+// mvn clean test '-Dcucumber.filter.tags=@Test2' '-Denv=rahul_GreenKart'
