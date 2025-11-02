@@ -30,12 +30,10 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     public void runScenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) {
         super.runScenario(pickleWrapper, featureWrapper);
     }
-    //Todo: try to research what is the purpose of thiss
 
 
 
 
 }
-//Note; Nasa #32 course content ka na sa course ni  Gianni Bruno
-//Note: example on how to run in terminal: mvn clean test -D "cucumber.options=--tags @INGFrameworkDemo" -D "env=ing"
+
 // mvn clean test '-Dcucumber.filter.tags=@Test2' '-Denv=rahul_GreenKart'
