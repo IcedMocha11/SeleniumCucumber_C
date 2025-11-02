@@ -1,10 +1,15 @@
 package utilities;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import javax.management.ServiceNotFoundException;
 import java.io.IOException;
+import java.sql.Timestamp;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 
 public class Hooks {
@@ -18,6 +23,18 @@ public class Hooks {
         BrowserDriver.initializeDriver();
         console.setInfo(BrowserDriver.baseUrl + " is successfully opened.");
 
+    }
+
+    @AfterStep
+    public void captureExceptionImage(Scenario scenario) {
+        if (scenario.isFailed()) {
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            String timeMilliseconds = Long.toString(timestamp.getTime());
+
+            byte[] screenshot = ((TakesScreenshot) BrowserDriver.getDriver())
+                    .getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", timeMilliseconds);
+        }
     }
 
     @After(order = 0)
