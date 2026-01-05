@@ -23,7 +23,8 @@ public class Console {
      * @param: description
      */
     public void setFailed(String description, String message){
-        System.out.println("\t\t\t" + Utilities.getTimeStamp() + " | FAILED | " + description);
+        System.out.println("\t\t\t" + Utilities.getTimeStamp() + " | FAILED | " + description + " | " + message);
+        throw new RuntimeException(description + " | " + message);
     }
 
     /*
