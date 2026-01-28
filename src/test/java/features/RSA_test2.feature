@@ -16,6 +16,3 @@ Feature: Greenkart
       | search     | om             |
       | search     | tom            |
 
-
-    #ToDo: continue adding allure reports here: https://www.youtube.com/watch?v=Kr6XnwdYd0U
-  #allure generate allure-results --clean -o allure report

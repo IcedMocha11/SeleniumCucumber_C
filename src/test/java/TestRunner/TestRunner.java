@@ -35,5 +35,3 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 
 
 }
-
-// mvn clean test '-Dcucumber.filter.tags=@Test2' '-Denv=rahul_GreenKart'
